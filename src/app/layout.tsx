@@ -1,10 +1,9 @@
 export const metadata = {
-	title: "Title placeholder",
-	description: "Description placeholder",
+	title: "Title Placeholder",
+	description: "Description Placeholder",
 } as const;
 
-type Args = {children: React.ReactNode};
-export default function RootLayout({children}: Args): React.ReactElement {
+export default ({children}: {children: React.ReactNode}) => {
 	return (
 		<html lang="en">
 			<body>{children}</body>

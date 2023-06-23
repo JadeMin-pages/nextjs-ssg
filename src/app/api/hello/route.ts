@@ -1,8 +1,12 @@
-import { NextResponse } from 'next/server'
- 
-export const GET = async () => {
-	const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
-	const data = await response.json();
+import { NextResponse } from 'next/server';
 
-	return NextResponse.json({data});
+
+
+export const GET = async () => {
+	const response = await fetch(
+		`https://jsonplaceholder.typicode.com/todos/1`
+	);
+
+
+	return NextResponse.json(await response.json());
 };
