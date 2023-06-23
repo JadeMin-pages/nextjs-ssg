@@ -2,8 +2,6 @@ import CSRForm from "./components/button.tsx";
 
 
 
-export const runtime = 'edge';
-
 export default async () => {
 	const randomInt = Math.floor(Math.random() * 2) + 1;
 	const data = await (await fetch(`https://jsonplaceholder.typicode.com/todos/${randomInt}`)).json();
