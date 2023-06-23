@@ -2,8 +2,6 @@ import { NextResponse } from 'next/server';
 
 
 
-export const runtime = 'edge';
-
 export const GET = async () => {
 	const response = await fetch(
 		`https://jsonplaceholder.typicode.com/todos/1`
