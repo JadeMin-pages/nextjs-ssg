@@ -10,5 +10,9 @@ export const GET = async () => {
 	);
 
 
-	return NextResponse.json(await response.json());
+	return new Response(await response.json(), {
+		headers: {
+			'content-type': 'application/json',
+		},
+	});
 };
